@@ -1,0 +1,80 @@
+/* Header- nav-bar******************************* */
+
+/* #animate-area {
+  width: 200px;
+  height: 200px;
+  background-image: url(http://placekitten.com/400/200);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite alternate;
+} */
+
+#header {
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+  height: 14rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: none;
+  border: none;
+  box-shadow: 0px 1px 0px $color-bordes;
+  box-sizing: content-box;
+  color: #fff;
+
+  &::after {
+    position: absolute;
+    background-image: url("/img/photo-1500278170415-daa5b83e9443.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.6;
+    z-index: 0;
+    -webkit-animation: mymove 50s linear infinite;
+    animation: mymove 50s linear infinite;
+  }
+
+  #logo-lg {
+    margin: 4rem 2rem;
+    z-index: 1;
+  }
+  #card-img-overlay {
+    padding: 3rem 1rem 1rem 1rem;
+    z-index: 1;
+    #card-title {
+      font-family: $main-font;
+      text-transform: uppercase;
+      text-shadow: 1px 0px 0px gray;
+      animation: moveInLeft 3s ease-in-out;
+    }
+  }
+}
+button:focus {
+  outline: 1px solid #fff;
+}
+
+.navbar-expand-md {
+  background-color: $color-primary-3;
+  width: 100%;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  z-index: 3;
+}
+
+.main-nav {
+  font-family: $main-font;
+  text-transform: uppercase;
+}
+
+#ul-nav {
+  float: right;
+  margin-left: 1rem;
+  font-family: $main-font;
+  text-transform: uppercase;
+}

@@ -1,0 +1,42 @@
+<%- include("../partials/header") %>
+
+<div class="row justify-content-center">
+    <div class="container col-xs-12 col-sm-9 col-md-8 col-lg-6">
+        <h2>Añadir Testimonio</h2>
+        <form action=" /inicio" method="POST" enctype="multipart/form-data" id="formNew" class="form">
+            <div class="form-control">
+                <label for="titulo">Titulo</label>
+                <input type="text" id="titulo" name="testimony[name]"
+                    placeholder="Ej: Una Experiencia inolvidable/2020" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="imageCover">Selecciona una foto principal sobre tu voluntariado</label>
+                <input type="file" id="imageCover" name="imageCover" accept="image/*" />
+
+            </div>
+            <div class="form-control">
+                <label for="imagess">Selecciona cuatro fotos sobre tu voluntariado que quieras compartir</label>
+                <input type="file" id="imagess" name="images" accept="image/*" multiple />
+            </div>
+            <div class="form-control">
+                <label for="texto">Texto</label>
+                <textarea type="text" id="texto" name="testimony[description]" cols="30" rows="10"
+                    placeholder="Escribe aqui tu texto"></textarea>
+
+                <em>Copia y pega la etiqueta que esta entre comillas donde quieras poner
+                    un punto aparte "&ltbr&gt&lt/br&gt"
+                </em>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <button id="btnSubmit" type="submit" class="btn btn-block">
+                    Añadir
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<%- include("../partials/footer") %>

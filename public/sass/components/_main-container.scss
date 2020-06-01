@@ -1,0 +1,9 @@
+.main {
+  padding: 2rem 4rem;
+  font-family: $main-font;
+  color: $color-fuente-principal;
+
+  @include respond(phone) {
+    padding: 0 1rem;
+  }
+}

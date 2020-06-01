@@ -1,0 +1,121 @@
+/* Show page************************** */
+#showContainer {
+  padding: 0 4rem;
+  #col-show {
+    height: fit-content;
+    .card-show1 {
+      margin-top: 2rem;
+      margin-bottom: 0.4rem;
+      border: none;
+      text-align: justify;
+      //box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.5);
+      .card-body {
+        background: $main-background;
+        color: #fff;
+        .card-title {
+          padding: 1rem;
+        }
+        .main-text {
+          //padding: 0 2rem;
+          color: $color-fuente-principal;
+          font-family: $second-font;
+          letter-spacing: 1px;
+        }
+        form {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+.well {
+  .card-show2 {
+    margin-top: 2rem;
+    border: none;
+    padding: 1rem;
+    //background: $color-primary-3;
+    background: transparent;
+    //box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.9);
+    //box-shadow: 0px 1px 5px 1px rgba(255, 255, 255, 0.5);
+
+    .comment-title {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
+      color: $color-secondary-2-1;
+      font-family: $main-font;
+
+      .bi-chat-fill {
+        vertical-align: baseline;
+      }
+    }
+    hr {
+      margin: 0;
+    }
+    .linea {
+      margin-top: 1rem;
+    }
+    .comentarios {
+      background-color: $main-background;
+      color: #fff;
+      font-family: $second-font;
+      box-shadow: 0px 1px 0px gray;
+      margin-top: 1px;
+      padding-top: 1rem;
+      padding-bottom: 0;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      .fecha {
+        line-height: 1;
+        color: rgb(0, 4, 238);
+      }
+      form {
+        display: inline;
+      }
+      .bi-person-square {
+        padding-bottom: 4px;
+        font-size: 1.3rem;
+      }
+      #well-collapse-edit {
+        color: $color-secondary-2-1;
+        margin-top: 15px;
+        border-left: 2px solid #ffbb33;
+        padding-left: 1rem;
+        .bi-pencil {
+          vertical-align: baseline;
+        }
+      }
+    }
+    #collapseComment {
+      font-family: $main-font;
+      padding: 1rem;
+      #well-collapse {
+        border-left: 2px solid #17a29b;
+        padding-left: 1rem;
+        color: $color-secondary-2-1;
+        .bi-pencil {
+          vertical-align: baseline;
+        }
+      }
+    }
+  }
+}
+
+#imagenes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+  height: fit-content;
+  #image-row {
+    border: none;
+    .img {
+      background: $main-background;
+      box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.5);
+      width: 100%;
+      height: auto;
+    }
+  }
+}

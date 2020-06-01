@@ -1,0 +1,65 @@
+@-webkit-keyframes mymove {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 83%;
+  }
+}
+
+@keyframes mymove {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 83%;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes move3d {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, -50%, 10%);
+  }
+
+  80% {
+    transform: translate3d(-80%, -20%, 50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0%, 0%, 100%);
+  }
+}

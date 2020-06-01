@@ -1,0 +1,51 @@
+@import "abstracts/mixins";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro&display=swap");
+@import "variables";
+@import "form";
+@import "audio";
+
+@import "homePage";
+@import "historia";
+@import "showPage";
+@import "header";
+@import "footer";
+@import "responsive";
+@import "animations";
+@import "components/button";
+@import "components/main-container";
+@import "base/base";
+@import "animate";
+@import "actividades";
+@import "sobre-taize";
+/* @import "/node_modules/animate.css/animate.compat.css"; */
+
+#container {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 3.5rem;
+  min-height: 100vh;
+  background: $main-background;
+  //background: #005c97; /* fallback for old browsers */
+  //background: -webkit-linear-gradient(
+  //  to right,
+  //  #363795,
+  //  #005c97
+  //); /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(
+  //  to right,
+  //  #363795,
+  //  #005c97
+  //); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  //box-shadow: 1px 1px 10px 0 rgba(255, 255, 255, 0.9);
+  //z-index: 0;
+}
+
+.pagination {
+  padding-top: 2rem;
+  z-index: 10;
+  li {
+    box-sizing: content-box;
+  }
+}

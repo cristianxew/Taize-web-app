@@ -1,0 +1,31 @@
+<%- include("./partials/header") %>
+
+<div class="row justify-content-center">
+
+    <div class="container col-xs-12 col-sm-9 col-md-7 col-lg-5">
+        <h2>Registrarse</h2>
+        <form action="/register" method="post" id="formRegister" class="form">
+            <div class="form-control">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="username" placeholder="Usuario" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="password" placeholder="Contraseña" />
+                <small>Error message</small>
+
+            </div>
+            <div class="form-control">
+                <label for="adminCode">Codigo de administrador</label>
+                <input type="text" id="adminCode" name="adminCode" placeholder="Opcional" />
+            </div>
+            <div class="form-control">
+                <button class="btn btn-block">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<%- include("./partials/footer") %>

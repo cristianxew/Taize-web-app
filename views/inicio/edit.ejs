@@ -1,0 +1,40 @@
+<%- include("../partials/header") %>
+
+<div class="row justify-content-center">
+  <div class="container col-xs-12 col-sm-9 col-md-8 col-lg-6">
+    <h2>Editar: <%= testimony.name %></h2>
+    <form action="/inicio/<%=testimony._id%>/?_method=PUT" method="POST" enctype="multipart/form-data" class="form"
+      id="formEdit">
+      <div class="form-control">
+        <label for="titulo-">Editar Titulo</label>
+        <input class="form-control" type="text" name="Testimony[name]" placeholder="Nombre y/o titulo" id="titulo-"
+          value="<%= testimony.name %>" />
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="imageCover">Editar Imagen principal</label>
+        <input type="file" id="imageCover" name="imageCover" accept="image/*" />
+      </div>
+      <div class="form-control">
+        <label for="images">Editar cuatro imagenes...</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple />
+      </div>
+      <div class="form-control">
+        <label for="texto-">Texto</label>
+        <textarea class="form-control" type="text" name="Testimony[description]" cols="30" rows="10" id="texto-">
+<%= testimony.description %></textarea>
+        <em>Copia y pega la etiqueta que esta entre comillas donde quieras poner
+          un punto aparte "&ltbr&gt&lt/br&gt"
+        </em>
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <button id="btnEdit" type="submit" class="btn btn-block">
+          Editar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

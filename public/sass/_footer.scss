@@ -1,0 +1,191 @@
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 36%;
+  margin: 1rem auto 0;
+  width: 100%;
+  //background-color: rgb(41, 22, 111);
+  //background-color: rgb(0, 0, 0);
+  background-color: #241b2f;
+  font-family: $main-font;
+  position: relative;
+  color: white;
+  z-index: 2;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  &::after {
+    position: absolute;
+    background-image: url("/img/Taizé-choeur.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.4;
+    z-index: -2;
+  }
+  h5 {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+  label {
+    text-align: left;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+
+    ul {
+      list-style: none;
+      text-align: center;
+      padding-left: 0;
+
+      li {
+        line-height: 2rem;
+        text-transform: uppercase;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        :hover {
+          @include trans();
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    .wrap {
+      width: 100%;
+      padding: 3rem;
+      h5 {
+        text-align: center;
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+        /* color: $color-primario; */
+      }
+      a {
+        text-decoration: none;
+      }
+      a i {
+        float: left;
+        margin: 5px;
+        font-size: 1.8rem;
+        color: white;
+        @include respond(phone) {
+          font-size: 1rem;
+        }
+      }
+      a p {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .formulario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      width: 100%;
+      margin: auto;
+      padding: 1rem 2rem 2rem 2rem;
+      display: block;
+    }
+    .form-control {
+      position: relative;
+      height: auto;
+      background-color: transparent;
+      border: none;
+      padding-bottom: 1rem;
+      label {
+        color: #fff;
+        display: block;
+        margin-bottom: 5px;
+      }
+      input,
+      textarea {
+        border-bottom: 3px solid $color-secondary-2-1;
+        border-radius: 0.4rem;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+        font-size: 1rem;
+        background-color: #fff;
+        border-style: none;
+        border-bottom-style: solid;
+
+        /* &:focus:invalid {
+          border-bottom: 4px solid #c41a33;
+        } */
+        &:focus {
+          outline: none;
+        }
+      }
+      small {
+        position: absolute;
+        color: darkorange;
+        bottom: -3px;
+        left: 12px;
+        visibility: hidden;
+      }
+    }
+    .form-control.success input {
+      border-bottom-color: $color-success;
+    }
+    .form-control.error input,
+    .form-control.error textarea {
+      border-bottom-color: $error-color;
+    }
+    .form-control.error small {
+      visibility: visible;
+    }
+  }
+}
+
+#copy {
+  color: rgba($color: #fff, $alpha: 0.5);
+  background-color: $color-primary-3;
+  font-size: 0.7rem;
+  padding: 1rem;
+  font-family: $main-font;
+  @include respond(phone) {
+    font-size: 0.5rem;
+    padding: 0.6rem;
+  }
+}
+
+//contacto page
+#contacto-h3 {
+  display: flex;
+  align-items: center;
+  margin: 4rem;
+  justify-content: center;
+  color: white;
+  font-family: $second-font;
+  padding: 4rem;
+  background-color: $color-primary-3;
+  border: 1px solid #fff;
+  height: 40vh;
+}

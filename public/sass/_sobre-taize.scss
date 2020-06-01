@@ -1,0 +1,8 @@
+.about-taize__video {
+  padding: 2rem 0;
+  @include respond(phone) {
+    iframe {
+      width: 100%;
+    }
+  }
+}

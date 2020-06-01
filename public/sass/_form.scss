@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro&display=swap");
+
+.container {
+  border-right: 1px solid gray;
+  padding: 1rem;
+  height: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5rem 0;
+  h2 {
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .form {
+    width: 100%;
+    padding: 2rem;
+    .form-control {
+      position: relative;
+      height: auto;
+      background-color: transparent;
+      border: none;
+      padding-bottom: 1rem;
+      label {
+        color: #fff;
+        display: block;
+        margin-bottom: 5px;
+      }
+      input,
+      textarea {
+        border-bottom: 4px solid $color-secondary-2-1;
+        border-radius: 0.3rem;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+        font-size: 1rem;
+        background-color: #fff;
+        border-style: none;
+        border-bottom-style: solid;
+
+        /* &:focus:invalid {
+          border-bottom: 4px solid #c41a33;
+        } */
+        &:focus {
+          outline: none;
+        }
+      }
+      small {
+        position: absolute;
+        color: $error-color;
+        bottom: -5px;
+        left: 12px;
+        visibility: hidden;
+      }
+      /* input[type="file"] {
+        color: white;
+      } */
+      em {
+        color: rgba($color: #fff, $alpha: 0.5);
+      }
+    }
+    .form-control.success input {
+      border-bottom-color: $color-success;
+    }
+    .form-control.error input {
+      border-bottom-color: $error-color;
+    }
+    .form-control.error small {
+      visibility: visible;
+    }
+  }
+}

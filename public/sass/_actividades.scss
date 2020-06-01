@@ -1,0 +1,7 @@
+#video-actividades {
+  @include respond(phone) {
+    iframe {
+      width: 100%;
+    }
+  }
+}

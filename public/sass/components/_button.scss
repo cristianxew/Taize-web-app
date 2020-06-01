@@ -1,0 +1,97 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.6rem 2rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 0.8rem;
+    color: $color-btn;
+    //Change for the <button> element
+    background-color: #0d0139;
+    border: 2px solid $color-secondary-2-1;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+    background: $color-secondary-2-1;
+    color: #fff;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 8px rgba($color-white, 0.4);
+  }
+
+  &--yellow:hover {
+    border: 1px solid white;
+    background: rgb(255, 196, 1);
+  }
+
+  &--red:hover {
+    border: 1px solid white;
+    background: rgb(202, 20, 20);
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn_sm {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 0.6rem;
+    color: $color-btn;
+    //Change for the <button> element
+    background-color: #0d0139;
+    border: 2px solid $color-secondary-2-1;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+    background: $color-secondary-2-1;
+    color: #fff;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 8px rgba($color-white, 0.4);
+  }
+
+  &--yellow:hover {
+    border: 1px solid white;
+    background: rgb(255, 196, 1);
+  }
+
+  &--red:hover {
+    border: 1px solid white;
+    background: rgb(202, 20, 20);
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
