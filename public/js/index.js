@@ -3,6 +3,8 @@ import Swal from "sweetalert2";
 import WOW from "./wow.js";
 import "./siriwave.js";
 import "./audio.js";
+import "./scroll.js";
+import "./gallery.js";
 import { checkEmail, checkLength } from "./validation.js";
 
 const emailForm = document.getElementById("send-form");

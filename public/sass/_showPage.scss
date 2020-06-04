@@ -45,6 +45,9 @@
       padding: 0.5rem;
       color: $color-secondary-2-1;
       font-family: $main-font;
+      @include respond(phone) {
+        display: grid;
+      }
 
       .bi-chat-fill {
         vertical-align: baseline;
@@ -91,8 +94,11 @@
     #collapseComment {
       font-family: $main-font;
       padding: 1rem;
+      @include respond(phone) {
+        padding: 0;
+      }
       #well-collapse {
-        border-left: 2px solid #17a29b;
+        border-left: 2px solid $color-secondary-2-1;
         padding-left: 1rem;
         color: $color-secondary-2-1;
         .bi-pencil {

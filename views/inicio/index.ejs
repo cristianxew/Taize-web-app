@@ -82,9 +82,7 @@
         mezcló de tal manera que logró hacer un libro de textos especimen. Lorem
         Ipsum es simplemente el texto de relleno de las imprentas y archivos de
         texto. Lorem Ipsum ha sido el texto de relleno estándar de las
-        industrias desde el año 1500, cuando un impresor N. del T. persona que
-        se dedica a la imprenta desconocido usó una galería de textos y los
-        mezcló de tal manera que logró hacer un libro de textos especimen.
+        industrias desde el año 1500, cuando un impresor N. del T.
       </p>
     </div>
   </div>
@@ -97,7 +95,7 @@
 
   <div class="row testimonios">
     <% testimonies.forEach(function(testimony){ %>
-    <div class="col-xl-4 col-lg-6 col-md-9 camps">
+    <div class="col-xl-4 col-lg-6 col-md-9 camps wow animate__animated animate__zoomIn animate__slow">
       <div class="card bg-dark text-white card-index">
         <img src="<%= testimony.imageCover %>" class="card-img" alt="<%= testimony.name %>" id="cover-img" />
         <div class="card-img-overlay body-overlay">
@@ -118,7 +116,7 @@
   </div>
 
 
-  <h4 class="title-h4 wow animate__animated animate__bounceInRight animate__slow">
+  <h4 class="title-h4">
     Mas testimonios de otros Jovenes de diferentes lugares que han compartido su experiencia con nosotros!
     <span>
       <em>Si tambien Hiciste un voluntariado en Taize, <a href="/register">registrate aqui </a> y compartenos tu
@@ -128,9 +126,9 @@
   </h4>
 
 
-  <div class="row testimonios">
+  <div class="row testimonios testimonios-invitados">
     <% invitados.forEach(function(testimony){ %>
-    <div class="col-xl-4 col-lg-6 col-md-9 camps">
+    <div class="col-xl-4 col-lg-6 col-md-9 camps wow animate__animated animate__zoomIn animate__slow">
       <div class="card bg-dark text-white card-index">
         <img src="<%= testimony.imageCover %>" class="card-img" alt="<%= testimony.name %>" id="cover-img" />
         <div class="card-img-overlay body-overlay">
@@ -140,8 +138,8 @@
           </p>
           <p class="card-text text-card">
             <%if(testimony.description.length > 80) { %> <%-
-            testimony.description.substring(0, 80) %> ... <%} else {%> <%-
-            testimony.description %> <% }%>
+                  testimony.description.substring(0, 80) %> ... <%} else {%> <%-
+                  testimony.description %> <% }%>
           </p>
           <a class="card-text" id="btn-ver-mas" href="/inicio/<%= testimony._id %>">Ver mas</a>
         </div>
@@ -149,10 +147,10 @@
     </div>
     <% }); %>
   </div>
-
-  <div id="botones" class="wow animate__animated animate__backInUp">
-    <a id="newpost" class="btn btn-sm" href="/inicio/new" role="button">Añadir Testimonio</a>
+  <div id="boton-añadir">
+    <a id="newpost" class="btn" href="/inicio/new" role="button">Añadir Testimonio</a>
   </div>
+
 
 </main>
 

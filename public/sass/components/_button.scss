@@ -1,4 +1,5 @@
 .btn {
+  background: transparent;
   &,
   &:link,
   &:visited {
@@ -12,9 +13,13 @@
     font-size: 0.8rem;
     color: $color-btn;
     //Change for the <button> element
-    background-color: #0d0139;
+    //background-color: #0d0139;
     border: 2px solid $color-secondary-2-1;
     cursor: pointer;
+    @include respond(phone) {
+      padding: 0.4rem 1rem;
+      display: block;
+    }
   }
 
   &:hover {

@@ -1,7 +1,17 @@
-#video-actividades {
+.sobre {
   @include respond(phone) {
-    iframe {
-      width: 100%;
+    flex-direction: column-reverse;
+  }
+  #video-actividades {
+    @include respond(phone) {
+      iframe {
+        width: 100%;
+      }
     }
+  }
+
+  .p-sob-taz {
+    text-align: justify;
+    padding: 1rem 0;
   }
 }

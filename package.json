@@ -7,7 +7,14 @@
     "start": "node app.js",
     "server": "nodemon app.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url /js",
-    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url /js"
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url /js",
+    "watch:sass": "node-sass ./public/sass/main.scss ./public/css/style.css -w",
+    "devserver": "live-server",
+    "start:sass": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass ./public/sass/main.scss ./public/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" ./public/css/style.comp.css -o ./public/css/style.prefix.css",
+    "compress:css": "node-sass ./public/css/style.prefix.css ./public/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "Cristian Bernal",
   "license": "ISC",
@@ -22,6 +29,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "howler": "^2.2.0",
+    "jquery": "^3.5.1",
     "locus": "^2.0.4",
     "method-override": "^3.0.0",
     "moment": "^2.24.0",
@@ -38,6 +46,14 @@
     "wow.js": "^1.2.2"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "autoprefixer": "^9.8.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "postcss-cli": "^7.1.1"
+  },
+  "engines": {
+    "node": "^10"
   }
 }
