@@ -77,6 +77,8 @@ app.use(indexRoutes);
 app.use("/inicio", testimoniesRoutes);
 app.use("/inicio/:id/comments", commentRoutes);
 
-app.listen(3000, function () {
-  console.log("Vol-Taz-app has started");
+const port = process.env.PORT || 4000;
+
+app.listen(port, () => {
+  console.log(`app running on port ${port}`);
 });
